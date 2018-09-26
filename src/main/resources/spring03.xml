@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 使用默认构造器实例化 -->
+    <bean id="testService" class="com.testSpring.service.TestService">
+        <!--set 注入-->
+        <property name="host" value="localhost"></property>
+        <property name="port" value="8877"></property>
+        <property name="testDao" ref="testDao"></property>
+    </bean>
+
+    <bean id="testDao" class="com.testSpring.dao.TestDao"></bean>
+
+
+
+</beans>
